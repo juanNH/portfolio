@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Layouts/navbar/Navbar";
+import Navbar from "../components/layoutComponents/navbar/Navbar";
 import { MainLayOutProps } from "./interfaces";
 
 const MainLayOut = ({ children }: MainLayOutProps) => {
