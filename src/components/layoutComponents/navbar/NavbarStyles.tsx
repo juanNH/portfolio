@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { BurgerDivProp } from "./interfaces";
 
 export const Header = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
 `;
 
 export const NameContainer = styled.div`
@@ -12,8 +13,9 @@ export const NameContainer = styled.div`
 
 export const Nav = styled.nav`
   padding: 0.5rem;
-  height: 5vh;
+  height: 8vh;
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
