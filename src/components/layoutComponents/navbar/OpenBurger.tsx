@@ -1,22 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import LinkComponent from "../../commons/linkComponent/LinkComponent";
 import { Li, Ul } from "./NavbarStyles";
-
-
+import { NavPages } from "./NavbarItemsData";
 
 const RightNav = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <Ul isOpen={isOpen}>
-      <Li>
-        <LinkComponent text={"Home"} to={"/"} />
-      </Li>
-      <Li>
-        <LinkComponent text={"About Me"} to={"/about"} />
-      </Li>
-      <Li>
-        <LinkComponent text={"Contact"} to={"/contact"} />
-      </Li>
+      {NavPages.map((item) => {
+        return (
+          <Li key={item.url}>
+            <LinkComponent text={item.text} to={item.url} />
+          </Li>
+        );
+      })}
     </Ul>
   );
 };

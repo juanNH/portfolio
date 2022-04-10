@@ -1,46 +1,14 @@
 import React from "react";
+import Footer from "../components/layoutComponents/footer/Footer";
 import Navbar from "../components/layoutComponents/navbar/Navbar";
 import { MainLayOutProps } from "./interfaces";
 
 const MainLayOut = ({ children }: MainLayOutProps) => {
-
   return (
     <>
       <Navbar />
       {children}
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
-      <h2>footer</h2>
+      <Footer />
     </>
   );
 };
