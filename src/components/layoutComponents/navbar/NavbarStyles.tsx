@@ -1,19 +1,29 @@
 import styled from "styled-components";
-import { BurgerDivProp } from "./interfaces";
+import { StyledLink } from "../../commons/linkComponent/LinkComponentStyles";
+import { BurgerDivProps, HeaderProps, NameContainerProps, UlProps } from "./interfaces";
 
-export const Header = styled.header`
+export const Header = styled.header<HeaderProps>`
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 0.5rem;
+  transition: all 0.3s linear;
+  background-color: ${({ scroll, theme }) =>
+    scroll ? theme.colors.secondary : "transparent"};
 `;
 
-export const NameContainer = styled.div`
+export const NameContainer = styled.div<NameContainerProps>`
   margin: 0 1rem;
+  transition: all 0.3s linear;
+
+  ${StyledLink} {
+    color: ${({ scroll, theme }) =>
+      scroll ? theme.colors.background : theme.colors.text};
+  }
 `;
 
 export const Nav = styled.nav`
   padding: 0.5rem;
-  height: 8vh;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -24,22 +34,27 @@ export const Nav = styled.nav`
 `;
 export const Li = styled.li`
   cursor: pointer;
-  background-color: green;
+  background-color: ${(props) => props.theme.colors.third};
   border: 2px solid black;
   padding: 0.5rem;
   border-radius: 50px;
   margin: 0 1rem;
   transition: all 300ms;
   :hover {
-    background: red;
+    background: ${(props) => props.theme.colors.secondary};
     transition: all 300ms;
+    border-color: ${(props) => props.theme.colors.third};
+    ${StyledLink} {
+      color: ${(props) => props.theme.colors.third};
+    }
   }
+
   @media (max-width: 900px) {
     margin: 1rem 0;
   }
 `;
 
-export const StyledBurger = styled.div<BurgerDivProp>`
+export const StyledBurger = styled.div<BurgerDivProps>`
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -53,6 +68,7 @@ export const StyledBurger = styled.div<BurgerDivProp>`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    
   }
   div {
     width: 2rem;
@@ -61,8 +77,13 @@ export const StyledBurger = styled.div<BurgerDivProp>`
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
+    background-color: red;
+
+    background-color: ${({ scroll, theme }) =>
+      scroll ? theme.colors.background : theme.colors.text};
     &:nth-child(1) {
       transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
+    
     }
     &:nth-child(2) {
       transform: ${({ isOpen }) =>
@@ -75,12 +96,12 @@ export const StyledBurger = styled.div<BurgerDivProp>`
   }
 `;
 
-export const Ul = styled.ul<BurgerDivProp>`
+export const Ul = styled.ul<UlProps>`
   list-style: none;
   display: flex;
   @media (max-width: 900px) {
-  align-items: center;
-  flex-direction: column;
+    align-items: center;
+    flex-direction: column;
     background-color: #0d2538;
     position: fixed;
     transform: ${({ isOpen }) =>
