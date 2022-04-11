@@ -11,8 +11,10 @@ import { FooterLogic } from "./FooterLogic";
 import { SocialNetworksProps } from "./interfaces";
 import IconLink from "./IconLink/IconLink";
 
+
+const { IconsStyled } = FooterLogic(SocialNetworks);
+
 const Footer = () => {
-  const { IconsStyled } = FooterLogic(SocialNetworks);
   return (
     <FooterContainer>
       <TextContainer>
