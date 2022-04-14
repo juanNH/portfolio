@@ -1,4 +1,6 @@
-const light = {
+import { globalConfigurations } from "./globalConfiguirations";
+
+const lightConfiguration = {
   title: "light",
   colors: {
     primary: "#062743",
@@ -8,4 +10,5 @@ const light = {
     text: "#000000",
   },
 };
+var light = Object.assign(lightConfiguration, globalConfigurations);
 export default light;
