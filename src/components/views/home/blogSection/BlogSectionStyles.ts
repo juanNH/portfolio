@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BlogSectionContainer = styled.section`
-  border-top: 1px solid red;
+  background-color: ${({ theme }) => theme.colors.background };
   display: flex;
   justify-content: center;
   align-items: center;

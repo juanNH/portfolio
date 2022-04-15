@@ -1,11 +1,12 @@
 import React from "react";
-import MainLayOut from "../layouts/MainLayOut";
+import UpperText from "../components/views/about/upperText/UpperText";
+import PagesLayOut from "../layouts/pagesLayOut/PagesLayOut";
 
 const About = () => {
   return (
-    <MainLayOut>
-      <div>About</div>
-    </MainLayOut>
+    <PagesLayOut title={"Sobre Mi"}>
+      <UpperText />
+    </PagesLayOut>
   );
 };
 
