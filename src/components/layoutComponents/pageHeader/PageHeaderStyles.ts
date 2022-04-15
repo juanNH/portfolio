@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-export const SectionImage = styled.section`
+export const HeaderSection = styled.section`
+  height: 50vh;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.background };
   background-image: url("https://via.placeholder.com/150");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100%;
-
   h1 {
-    text-align: center;
-    margin: 30%;
-    font-size: 2rem;
+    font-size: 50px;
+    @media (max-width: ${({ theme }) => theme.screenSize.small}) {
+      font-size: 40px;
+    }
   }
 `;

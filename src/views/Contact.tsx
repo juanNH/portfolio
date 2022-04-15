@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayOut from "../layouts/MainLayOut";
+import MainLayOut from "../layouts/mainLayOut/MainLayOut";
 
 const Contact = () => {
 

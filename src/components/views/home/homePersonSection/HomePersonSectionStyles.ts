@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PersonSection = styled.section`
-  border-top: 1px solid red;
+  background-color: ${({ theme }) => theme.colors.background };
   background-image: url("https://via.placeholder.com/150");
   background-repeat: no-repeat;
   background-size: cover;
