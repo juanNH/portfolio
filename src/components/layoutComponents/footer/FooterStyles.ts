@@ -11,11 +11,14 @@ export const FooterContainer = styled.footer`
 `;
 
 export const TextContainer = styled.div`
-  display: inherit;
+  display: grid;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  flex: 1;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${({ theme }) => theme.screenSize.small}) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -28,10 +31,16 @@ export const SocialContainer = styled.div`
 
 export const LinksContainer = styled.div`
   display: inherit;
+  margin: auto;
+  padding: 1rem;
   flex-direction: column;
   ${StyledLink} {
-      color: ${(props) => props.theme.colors.third};
-    }
+    color: ${(props) => props.theme.colors.third};
+  }
+`;
+export const PersonalDataContainer = styled.div`
+  margin: auto;
+  padding: 1rem;
 `;
 
 export const CreateIcon = (icon: IconType) => {

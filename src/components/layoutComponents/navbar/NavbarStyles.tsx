@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { StyledLink } from "../../commons/linkComponent/LinkComponentStyles";
-import { BurgerDivProps, HeaderProps, NameContainerProps, UlProps } from "./interfaces";
+import {
+  BurgerDivProps,
+  HeaderProps,
+  NameContainerProps,
+  UlProps,
+} from "./interfaces";
 
 export const Header = styled.header<HeaderProps>`
   position: fixed;
@@ -49,7 +54,7 @@ export const Li = styled.li`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: ${({ theme }) => theme.screenSize.small}) {
     margin: 1rem 0;
   }
 `;
@@ -64,11 +69,10 @@ export const StyledBurger = styled.div<BurgerDivProps>`
   display: none;
   cursor: pointer;
 
-  @media (max-width: 900px) {
+  @media (max-width: ${({ theme }) => theme.screenSize.small}) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    
   }
   div {
     width: 2rem;
@@ -83,7 +87,6 @@ export const StyledBurger = styled.div<BurgerDivProps>`
       scroll ? theme.colors.background : theme.colors.text};
     &:nth-child(1) {
       transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
-    
     }
     &:nth-child(2) {
       transform: ${({ isOpen }) =>
@@ -99,7 +102,7 @@ export const StyledBurger = styled.div<BurgerDivProps>`
 export const Ul = styled.ul<UlProps>`
   list-style: none;
   display: flex;
-  @media (max-width: 900px) {
+  @media (max-width: ${({ theme }) => theme.screenSize.small}) {
     align-items: center;
     flex-direction: column;
     background-color: #0d2538;

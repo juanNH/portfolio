@@ -4,7 +4,7 @@ import HomeHeader from "../components/views/home/homeHeader/HomeHeader";
 import HomePersonSection from "../components/views/home/homePersonSection/HomePersonSection";
 import MainLayOut from "../layouts/mainLayOut/MainLayOut";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <MainLayOut>
       <HomeHeader />
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

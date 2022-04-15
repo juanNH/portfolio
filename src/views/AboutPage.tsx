@@ -2,7 +2,7 @@ import React from "react";
 import UpperText from "../components/views/about/upperText/UpperText";
 import PagesLayOut from "../layouts/pagesLayOut/PagesLayOut";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <PagesLayOut title={"Sobre Mi"}>
       <UpperText />
@@ -10,4 +10,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

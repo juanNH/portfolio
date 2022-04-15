@@ -1,17 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "../views/About";
-import Contact from "../views/Contact";
-import Home from "../views/Home";
-import NotFound from "../views/NotFound";
+import AboutPage from "../views/AboutPage";
+import BlogPage from "../views/BlogPage";
+import ContactPage from "../views/ContactPage";
+import HomePage from "../views/HomePage";
+import NotFoundPage from "../views/NotFoundPage";
 
 const IndexRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

@@ -3,6 +3,7 @@ import LinkComponent from "../../commons/linkComponent/LinkComponent";
 import {
   FooterContainer,
   LinksContainer,
+  PersonalDataContainer,
   SocialContainer,
   TextContainer,
 } from "./FooterStyles";
@@ -18,10 +19,10 @@ const Footer = () => {
   return (
     <FooterContainer>
       <TextContainer>
-        <div>
+        <PersonalDataContainer>
           <h3>Juan Herrera</h3>
           <h5>© Todos los derechos reservados 2022</h5>
-        </div>
+        </PersonalDataContainer>
         <LinksContainer>
           {FooterLinks.map((item) => {
             return (
