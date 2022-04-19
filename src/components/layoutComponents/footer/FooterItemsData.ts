@@ -24,10 +24,10 @@ export const FooterLinks = [
 export const SocialNetworks:SocialNetworksProps[] = [
   {
     icon: AiFillLinkedin,
-    url: "/contact",
+    url: "https://www.linkedin.com/in/juannherrerad/",
   },
   {
     icon: AiFillGithub,
-    url: "/",
+    url: "https://github.com/juanNH",
   },
 ]

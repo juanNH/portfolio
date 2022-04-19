@@ -1,10 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 import { IconLinkProps } from './interfaces'
 
 const IconLink = ({children, to}:IconLinkProps) => {
   return (
-    <Link to={to}>{children}</Link>
+    <a target="_blank" href={to} rel="noreferrer">{children}</a>
   )
 }
 

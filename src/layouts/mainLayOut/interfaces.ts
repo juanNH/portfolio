@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
+import { LayoutsInterfaceProps } from "../../globalInterfaces";
 
-export interface MainLayOutProps{
-    children: ReactNode
+export interface MainLayOutProps extends LayoutsInterfaceProps{
 }
