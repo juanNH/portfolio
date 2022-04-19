@@ -1,12 +1,12 @@
 import React from "react";
-import MainLayOut from "../layouts/mainLayOut/MainLayOut";
+import SocialData from "../components/views/contact/socialData/SocialData";
+import PagesLayOut from "../layouts/pagesLayOut/PagesLayOut";
 
 const ContactPage = () => {
-
   return (
-    <MainLayOut>
-      <div>Contact</div>
-    </MainLayOut>
+    <PagesLayOut title={"Contacto"}>
+      <SocialData />
+    </PagesLayOut>
   );
 };
 

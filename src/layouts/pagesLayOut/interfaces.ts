@@ -1,6 +1,5 @@
-import { ReactNode } from "react";
+import { LayoutsInterfaceProps } from "../../globalInterfaces";
 
-export interface PagesLayOutProps{
-    children: ReactNode;
+export interface PagesLayOutProps extends LayoutsInterfaceProps{
     title:string;
 }

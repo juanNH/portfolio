@@ -32,7 +32,7 @@ const Footer = () => {
         </LinksContainer>
       </TextContainer>
       <SocialContainer>
-        {IconsStyled.map((icon: SocialNetworksProps, index) => {
+        {IconsStyled.map((icon: SocialNetworksProps) => {
           return (
             <IconLink to={icon.url} key={icon.url}>
               <icon.icon />
