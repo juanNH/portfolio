@@ -4,9 +4,10 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BooleanLiteral } from "typescript";
 
 export const Nav = styled.div`
-    background: ${props => props.theme.bg};;
+    background: ${props => props.theme.palette.primary};;
     width: 100%;
     height: 70px;
+    position: fixed;
 `;
 
 export const Wrapper = styled.div`
@@ -33,8 +34,8 @@ export const Menu = styled.ul<MenuProps>`
     display: flex;
     justify-content: space-between;
     list-style: none;
-    @media screen and (max-width: ${props => props.theme.md}){
-        background-color: ${props => props.theme.bg};
+    @media screen and (max-width: ${props => props.theme.media.md}){
+        background-color: ${props => props.theme.palette.primary};
         position: absolute;
         width: 100%;
         top: 70px;
@@ -48,7 +49,7 @@ export const Menu = styled.ul<MenuProps>`
 `;
 export const MenuItem = styled.li`
     height:100%;
-    @media screen and (max-width: ${props => props.theme.md}){
+    @media screen and (max-width: ${props => props.theme.media.md}){
         width: 100%;
         height: 70px;
         display: flex;
@@ -66,7 +67,7 @@ export const IconOpen = styled(AiOutlineMenu)`
 `;
 export const MobileIcon = styled.div`
     display: none;
-    @media screen and (max-width: ${props => props.theme.md}){
+    @media screen and (max-width: ${props => props.theme.media.md}){
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -89,7 +90,7 @@ export const MenuItemLink = styled(Link)`
         background-color: #e8792a;
         transition: 500ms all ease;
     }
-    @media screen and (max-width: ${props => props.theme.md}){
+    @media screen and (max-width: ${props => props.theme.media.md}){
         width: 100%;
     }
 `;

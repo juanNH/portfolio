@@ -5,7 +5,6 @@ const Layout = ({ children }: { children: ReactElement; }) => {
     return (
         <>
             <Navbar />
-            <h1 className='text-red-900'></h1>
             {children}
         </>
     )

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/layout/Layout'
+import { Presentation } from '../components/app/base/presentation/Presentation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,9 +17,7 @@ export default function Home() {
       </Head>
       <Layout>
         <main>
-          <h1 className="text-3xl font-bold underline">
-            Hello world!
-          </h1>
+          <Presentation />
         </main>
       </Layout>
 
