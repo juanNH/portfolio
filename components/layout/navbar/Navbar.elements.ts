@@ -4,7 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BooleanLiteral } from "typescript";
 
 export const Nav = styled.div`
-    background: ${props => props.theme.palette.primary};;
+    background: ${props => props.theme.palette.bg};;
     width: 100%;
     height: 70px;
     position: fixed;
@@ -24,7 +24,7 @@ export const LogoContainer = styled.div`
     display: flex;
     margin-left: 0.5rem;
     align-items: center;
-    color: black;
+    color: ${props => props.theme.palette.text};
 `;
 interface MenuProps {
     isOpen: boolean;
@@ -35,7 +35,7 @@ export const Menu = styled.ul<MenuProps>`
     justify-content: space-between;
     list-style: none;
     @media screen and (max-width: ${props => props.theme.media.md}){
-        background-color: ${props => props.theme.palette.primary};
+        background-color: ${props => props.theme.palette.bg};
         position: absolute;
         width: 100%;
         top: 70px;
@@ -58,11 +58,11 @@ export const MenuItem = styled.li`
     }
 `;
 export const IconClose = styled(AiOutlineClose)`
-    color:red;
+    color: ${props => props.theme.palette.text};
     margin-right: 1rem;
 `;
 export const IconOpen = styled(AiOutlineMenu)`
-    color:red;
+    color: ${props => props.theme.palette.text};
     margin-right: 1rem;
 `;
 export const MobileIcon = styled.div`
@@ -74,7 +74,7 @@ export const MobileIcon = styled.div`
     }
 `;
 export const MenuItemLink = styled(Link)`
-    color: #000;
+    color: ${props => props.theme.palette.text.light};
     display:flex;
     justify-content: center;
     align-items: center;
@@ -86,8 +86,8 @@ export const MenuItemLink = styled(Link)`
     cursor: pointer;
     transition: 500ms all ease;
     &:hover{
-        color: #fff;
-        background-color: #e8792a;
+        color: ${props => props.theme.palette.text.dark};
+        background-color:  ${props => props.theme.palette.secondary};;
         transition: 500ms all ease;
     }
     @media screen and (max-width: ${props => props.theme.media.md}){

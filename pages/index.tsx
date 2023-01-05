@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
 import Layout from '../components/layout/Layout'
 import { Presentation } from '../components/app/base/presentation/Presentation'
 
