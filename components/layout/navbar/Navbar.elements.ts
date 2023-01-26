@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { BooleanLiteral } from "typescript";
 
 export const Nav = styled.div`
     background: ${props => props.theme.palette.bg};;
@@ -24,7 +23,7 @@ export const LogoContainer = styled.div`
     display: flex;
     margin-left: 0.5rem;
     align-items: center;
-    color: ${props => props.theme.palette.text};
+    color: ${props => props.theme.palette.text.title};
 `;
 interface MenuProps {
     isOpen: boolean;
@@ -58,11 +57,11 @@ export const MenuItem = styled.li`
     }
 `;
 export const IconClose = styled(AiOutlineClose)`
-    color: ${props => props.theme.palette.text};
+    color: ${props => props.theme.palette.text.title};
     margin-right: 1rem;
 `;
 export const IconOpen = styled(AiOutlineMenu)`
-    color: ${props => props.theme.palette.text};
+    color: ${props => props.theme.palette.text.title};
     margin-right: 1rem;
 `;
 export const MobileIcon = styled.div`

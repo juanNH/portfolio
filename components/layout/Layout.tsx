@@ -4,7 +4,7 @@ import Navbar from './navbar/Navbar'
 const Layout = ({ children }: { children: ReactElement; }) => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
         </>
     )

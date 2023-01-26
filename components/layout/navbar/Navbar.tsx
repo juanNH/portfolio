@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import { useState } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { IconClose, IconOpen, LogoContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Nav, Wrapper } from './Navbar.elements';
 
 const Navbar = () => {

@@ -1,12 +1,17 @@
 import { createGlobalStyle } from "styled-components";
+interface Colors{
+  ligth: string;
+  dark: string;
+}
 
 interface Palette {
   bg: string;
-  primary: string;
+  primary: Colors;
   secondary: string;
   third: string;
   fourth: string;
   text: {
+    title: string;
     light: string;
     dark: string;
   };
@@ -23,12 +28,16 @@ interface Theme {
 export const theme: Theme = {
   palette: {
     bg: 'rgba(24,26,27,1)',
-    primary: 'rgba(195,242,124,1)',
+    primary: {
+      ligth: 'rgba(60, 20, 179,1)',
+      dark: 'rgba(60, 20, 179,0.6)',
+    },
     secondary: 'rgba(221,240,194,1)',
     third: 'rgba(68,112,2,1)',
     fourth: 'rgba(174,189,153,1)',
     text: {
-      light: 'rgba(255,255,255,1)',
+      title: 'rgb(232, 230, 227)',
+      light: 'rgb(163, 155, 143)',
       dark: 'rgba(0,0,0,1)'
     }
   },

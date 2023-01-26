@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import Layout from '../components/layout/Layout'
 import { Presentation } from '../components/app/base/presentation/Presentation'
-
-const inter = Inter({ subsets: ['latin'] })
+import { motion, useScroll } from 'framer-motion'
+import { WorkExeperience } from '../components/app/base/workExperience/WorkExeperience';
+import { Skillset } from '../components/app/base/skillset/Skillset';
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <Head>
@@ -14,11 +14,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <main>
-          <Presentation />
-        </main>
-      </Layout>
+      <main>
+        <motion.div style={{ scaleX: scrollYProgress }} />
+        <motion.h1 animate={{ y: 100 }}>
+          Wubba Lubba Dub Dub!
+        </motion.h1>
+        <Presentation />
+        <WorkExeperience/>
+        <Skillset/>
+      </main>
 
     </>
   )
